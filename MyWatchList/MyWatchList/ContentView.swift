@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var appName = "My Watchlist"
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: .leading) {
+            Text(appName)
+                .font(.headline)
+                .foregroundColor(.gray)
+            HStack {
+                Text("Aujourd'hui")
+                    .font(.title)
+                    .bold()
+                Spacer()
+                Image(systemName: "person.fill")
+                    .padding(10)
+                    .background(Color.green)
+                    .cornerRadius(20)
+            }
+            Spacer()
+        }.padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+            Group {
+                ContentView()
+                ContentView().preferredColorScheme(.dark)
+            }
     }
 }
