@@ -41,4 +41,3 @@ struct MovieBackdropCard_Previews: PreviewProvider {
         MovieBackdropCard(movie: Movie.stubbedMovie)
     }
 }
-

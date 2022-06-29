@@ -1,8 +1,9 @@
 //
-//  StubMovie.swift
-//  MyWatchList
+//  Movie+Stub.swift
+//  SwiftUIMovieDb
 //
-//  Created by Etudiant on 29/06/2022.
+//  Created by Alfian Losari on 23/05/20.
+//  Copyright © 2020 Alfian Losari. All rights reserved.
 //
 
 import Foundation

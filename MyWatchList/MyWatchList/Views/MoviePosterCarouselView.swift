@@ -40,4 +40,3 @@ struct MoviePosterCarouselView_Previews: PreviewProvider {
         MoviePosterCarouselView(title: "Now Playing", movies: Movie.stubbedMovies)
     }
 }
-

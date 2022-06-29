@@ -46,4 +46,3 @@ struct LoadingView_Previews: PreviewProvider {
         LoadingView(isLoading: true, error: nil, retryAction: nil)
     }
 }
-

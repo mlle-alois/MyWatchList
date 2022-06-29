@@ -158,4 +158,3 @@ struct MovieVideo: Decodable, Identifiable {
         return URL(string: "https://youtube.com/watch?v=\(key)")
     }
 }
-

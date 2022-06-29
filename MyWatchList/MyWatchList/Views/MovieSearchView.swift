@@ -46,4 +46,3 @@ struct MovieSearchView_Previews: PreviewProvider {
         MovieSearchView()
     }
 }
-

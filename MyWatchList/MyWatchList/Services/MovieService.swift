@@ -4,7 +4,6 @@
 //
 //  Created by Etudiant on 29/06/2022.
 //
-
 import Foundation
 
 protocol MovieService {
@@ -56,5 +55,4 @@ enum MovieError: Error, CustomNSError {
     }
     
 }
-
 

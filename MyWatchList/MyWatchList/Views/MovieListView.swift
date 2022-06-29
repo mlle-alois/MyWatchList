@@ -89,4 +89,3 @@ struct MovieListView_Previews: PreviewProvider {
     }
 }
 
-

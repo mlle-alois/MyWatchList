@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/etudiant/Documents/GitHub/MyWatchList/MyWatchList.xcodeproj">
    </FileRef>
 </Workspace>
