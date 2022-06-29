@@ -28,6 +28,24 @@ struct ContentView: View {
             }
             .tag(1)
             
+            MovieSearchView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "checkmark")
+                        Text("Seen")
+                    }
+            }
+            .tag(2)
+            
+            MovieSearchView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "plus")
+                        Text("Must see")
+                    }
+            }
+            .tag(3)
+            
         }
     }
 }
