@@ -8,34 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    var appName = "My Watchlist"
-    
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(appName)
-                .font(.headline)
-                .foregroundColor(.gray)
-            HStack {
-                Text("Aujourd'hui")
-                    .font(.title)
-                    .bold()
-                Spacer()
-                Image(systemName: "person.fill")
-                    .padding(10)
-                    .background(Color.green)
-                    .cornerRadius(20)
+        TabView {
+            MovieListView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "tv")
+                        Text("Movies")
+                    }
             }
-            Spacer()
-        }.padding()
+            .tag(0)
+            
+            MovieSearchView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+            }
+            .tag(1)
+            
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-            Group {
-                ContentView()
-                ContentView().preferredColorScheme(.dark)
-            }
+        ContentView()
     }
 }
