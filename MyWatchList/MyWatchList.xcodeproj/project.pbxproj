@@ -526,21 +526,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftUIMovieDbMac/SwiftUIMovieDbMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyWatchListMac/MyWatchListMac.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMovieDbMac/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyWatchListMac/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIMovieDbMac/Info.plist;
+				INFOPLIST_FILE = MyWatchListMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.SwiftUIMovieDbMac;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mlle-alois.MyWatchListMac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -551,21 +551,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftUIMovieDbMac/SwiftUIMovieDbMac.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyWatchListMac/MyWatchListMac.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMovieDbMac/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyWatchListMac/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIMovieDbMac/Info.plist;
+				INFOPLIST_FILE = MyWatchListMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.SwiftUIMovieDbMac;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mlle-alois.MyWatchListMac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -696,12 +696,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyWatchList/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIMovieDb/Info.plist;
+				INFOPLIST_FILE = MyWatchList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.SwiftUIMovieDb;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mlle-alois.MyWatchList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -716,12 +716,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyWatchList/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIMovieDb/Info.plist;
+				INFOPLIST_FILE = MyWatchList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.SwiftUIMovieDb;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mlle-alois.MyWatchList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
