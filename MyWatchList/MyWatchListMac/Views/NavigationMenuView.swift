@@ -12,7 +12,6 @@ struct NavigationMenuView: View {
     @ObservedObject var searchState = MovieSearchState()
     @State var selection: String? = "Home"
     
-    // Remove Focus on Search Field when selected
     private let cellProxy = ListCellProxy()
     
     var body: some View {
@@ -23,7 +22,6 @@ struct NavigationMenuView: View {
                         self.selection = "Search"
                     }
                 })            }
-//                .background(ListCellHelper(proxy: ListCellProxy()))
                 .padding(.vertical)
             
             Section(header: Text("Discover")) {
