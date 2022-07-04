@@ -20,7 +20,6 @@ struct MovieButtonsView: View {
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .foregroundColor(.white)
-                        
                 }
                 
                 Button {
@@ -28,7 +27,6 @@ struct MovieButtonsView: View {
                 } label: {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.white)
-                        
                 }
             }
             Spacer()
