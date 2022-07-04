@@ -71,6 +71,7 @@
 		ECE34D642873487100D8B701 /* MovieSeenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE34D632873487100D8B701 /* MovieSeenView.swift */; };
 		ECE34D6628734A8600D8B701 /* MovieBackdropVerticalCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE34D6528734A8600D8B701 /* MovieBackdropVerticalCarouselView.swift */; };
 		ECE34D6828734CED00D8B701 /* MovieMustSeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE34D6728734CED00D8B701 /* MovieMustSeeView.swift */; };
+		ECE34D732873669A00D8B701 /* MovieButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE34D722873669A00D8B701 /* MovieButtonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +132,7 @@
 		ECE34D632873487100D8B701 /* MovieSeenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSeenView.swift; sourceTree = "<group>"; };
 		ECE34D6528734A8600D8B701 /* MovieBackdropVerticalCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackdropVerticalCarouselView.swift; sourceTree = "<group>"; };
 		ECE34D6728734CED00D8B701 /* MovieMustSeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMustSeeView.swift; sourceTree = "<group>"; };
+		ECE34D722873669A00D8B701 /* MovieButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 				8BF4147C247A37A800F5BE68 /* MovieSearchView.swift */,
 				ECE34D632873487100D8B701 /* MovieSeenView.swift */,
 				ECE34D6728734CED00D8B701 /* MovieMustSeeView.swift */,
+				ECE34D722873669A00D8B701 /* MovieButtonsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				8B755F10247936D300FD58C8 /* SceneDelegate.swift in Sources */,
 				8B755F3D2479524600FD58C8 /* MoviePosterCard.swift in Sources */,
 				8BF4147F247A37CA00F5BE68 /* SearchBar.swift in Sources */,
+				ECE34D732873669A00D8B701 /* MovieButtonsView.swift in Sources */,
 				8B755F392479460E00FD58C8 /* ImageLoader.swift in Sources */,
 				8B755F232479370E00FD58C8 /* Movie.swift in Sources */,
 				ECE34D642873487100D8B701 /* MovieSeenView.swift in Sources */,

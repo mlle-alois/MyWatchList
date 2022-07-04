@@ -22,27 +22,7 @@ struct MovieBackdropCard: View {
                     Image(uiImage: self.imageLoader.image!)
                     .resizable()
                 }
-                VStack {
-                    HStack {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "plus.circle.fill")
-                                .foregroundColor(.white)
-                                
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.white)
-                                
-                        }
-                        Spacer()
-                    }
-                    Spacer()
-                }.padding(.all, 5)
+                MovieButtonsView(movie: movie)
                
             }
             .aspectRatio(16/9, contentMode: .fit)

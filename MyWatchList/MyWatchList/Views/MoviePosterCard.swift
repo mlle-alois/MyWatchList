@@ -20,12 +20,14 @@ struct MoviePosterCard: View {
                     .aspectRatio(contentMode: .fill)
                     .cornerRadius(8)
                     .shadow(radius: 4)
+                MovieButtonsView(movie: movie)
                 
             } else {
                 Rectangle()
                     .fill(Color.gray.opacity(0.3))
                     .cornerRadius(8)
                     .shadow(radius: 4)
+                MovieButtonsView(movie: movie)
                 
                 Text(movie.title)
                     .multilineTextAlignment(.center)
