@@ -33,7 +33,6 @@ struct MovieDetailView: View {
 struct MovieDetailListView: View {
     
     let movie: Movie
-    @State private var selectedTrailer: MovieVideo?
     let imageLoader = ImageLoader()
     
     var body: some View {
@@ -99,28 +98,6 @@ struct MovieDetailListView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 }
             }
-            
-            Divider()
-            
-            if movie.youtubeTrailers != nil && movie.youtubeTrailers!.count > 0 {
-                Text("Trailers").font(.headline)
-                
-                ForEach(movie.youtubeTrailers!) { trailer in
-                    Button(action: {
-                        self.selectedTrailer = trailer
-                    }) {
-                        HStack {
-                            Text(trailer.name)
-                            Spacer()
-                            Image(systemName: "play.circle.fill")
-                                .foregroundColor(Color(UIColor.systemBlue))
-                        }
-                    }
-                }
-            }
-        }
-        .sheet(item: self.$selectedTrailer) { trailer in
-            SafariView(url: trailer.youtubeURL!)
         }
     }
 }

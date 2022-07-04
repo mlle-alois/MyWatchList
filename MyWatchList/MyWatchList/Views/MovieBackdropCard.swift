@@ -28,6 +28,10 @@ struct MovieBackdropCard: View {
             .shadow(radius: 4)
             
             Text(movie.title)
+            
+            Text("Add") // TODO button
+            Text("Seen")
+            
         }
         .lineLimit(1)
         .onAppear {

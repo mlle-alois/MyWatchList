@@ -28,7 +28,7 @@ struct ContentView: View {
             }
             .tag(1)
             
-            MovieSearchView()
+            MovieSeenView()
                 .tabItem {
                     VStack {
                         Image(systemName: "checkmark")
@@ -37,7 +37,7 @@ struct ContentView: View {
             }
             .tag(2)
             
-            MovieSearchView()
+            MovieMustSeeView()
                 .tabItem {
                     VStack {
                         Image(systemName: "plus")
