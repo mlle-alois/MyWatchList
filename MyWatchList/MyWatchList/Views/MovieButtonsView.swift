@@ -14,6 +14,7 @@ struct MovieButtonsView: View {
     var body: some View {
         VStack {
             HStack {
+                Spacer()
                 Button {
                     
                 } label: {
@@ -29,7 +30,6 @@ struct MovieButtonsView: View {
                         .foregroundColor(.white)
                         
                 }
-                Spacer()
             }
             Spacer()
         }.padding(.all, 5)
