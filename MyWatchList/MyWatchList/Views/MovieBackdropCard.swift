@@ -22,15 +22,34 @@ struct MovieBackdropCard: View {
                     Image(uiImage: self.imageLoader.image!)
                     .resizable()
                 }
+                VStack {
+                    HStack {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.white)
+                                
+                        }
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(.white)
+                                
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                }.padding(.all, 5)
+               
             }
             .aspectRatio(16/9, contentMode: .fit)
             .cornerRadius(8)
             .shadow(radius: 4)
             
             Text(movie.title)
-            
-            Text("Add") // TODO button
-            Text("Seen")
             
         }
         .lineLimit(1)
