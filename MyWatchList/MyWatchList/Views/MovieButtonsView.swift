@@ -27,8 +27,10 @@ struct MovieButtonsView: View {
                     }
                 } label: {
                     Image(systemName: "plus.circle.fill")
-                    .foregroundColor(buttonAddBackColor)
-                }.shadow(color: .black, radius: 10)
+                        .foregroundColor(buttonAddBackColor)
+                }
+                .shadow(color: .black, radius: 10)
+                .buttonStyle(BorderlessButtonStyle())
                 
                 Button {
                     if (self.buttonSeenBackColor == .green) {
@@ -38,8 +40,10 @@ struct MovieButtonsView: View {
                     }
                 } label: {
                     Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(buttonSeenBackColor)
-                }.shadow(color: .black, radius: 10)
+                        .foregroundColor(buttonSeenBackColor)
+                }
+                .shadow(color: .black, radius: 10)
+                .buttonStyle(BorderlessButtonStyle())
                 
             }
             Spacer()
