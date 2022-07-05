@@ -129,5 +129,6 @@ struct MovieDetailView_Previews: PreviewProvider {
         NavigationView {
             MovieDetailView(movieId: Movie.stubbedMovie.id)
         }
+        .navigationViewStyle(.stack)
     }
 }

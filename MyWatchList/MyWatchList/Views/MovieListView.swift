@@ -73,6 +73,7 @@ struct MovieListView: View {
             }
             .navigationBarTitle("My Watchlist")
         }
+        .navigationViewStyle(.stack)
         .onAppear {
             self.nowPlayingState.loadMovies(with: .nowPlaying)
             self.upcomingState.loadMovies(with: .upcoming)
