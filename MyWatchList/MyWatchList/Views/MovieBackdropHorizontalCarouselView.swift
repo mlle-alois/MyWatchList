@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MovieBackdropCarouselView: View {
+struct MovieBackdropHorizontalCarouselView: View {
     
     let title: String
     let movies: [Movie]
@@ -38,6 +38,6 @@ struct MovieBackdropCarouselView: View {
 
 struct MovieBackdropCarouselView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieBackdropCarouselView(title: "Latest", movies: Movie.stubbedMovies)
+        MovieBackdropHorizontalCarouselView(title: "Latest", movies: Movie.stubbedMovies)
     }
 }

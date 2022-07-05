@@ -32,7 +32,7 @@ struct MovieListView: View {
                 
                 Group {
                     if upcomingState.movies != nil {
-                        MovieBackdropCarouselView(title: "Upcoming", movies: upcomingState.movies!)
+                        MovieBackdropHorizontalCarouselView(title: "Upcoming", movies: upcomingState.movies!)
                     } else {
                         LoadingView(isLoading: self.upcomingState.isLoading, error: self.upcomingState.error) {
                             self.upcomingState.loadMovies(with: .upcoming)
@@ -44,7 +44,7 @@ struct MovieListView: View {
                 
                 Group {
                     if topRatedState.movies != nil {
-                        MovieBackdropCarouselView(title: "Top Rated", movies: topRatedState.movies!)
+                        MovieBackdropHorizontalCarouselView(title: "Top Rated", movies: topRatedState.movies!)
                         
                     } else {
                         LoadingView(isLoading: self.topRatedState.isLoading, error: self.topRatedState.error) {
@@ -58,7 +58,7 @@ struct MovieListView: View {
                 
                 Group {
                     if popularState.movies != nil {
-                        MovieBackdropCarouselView(title: "Popular", movies: popularState.movies!)
+                        MovieBackdropHorizontalCarouselView(title: "Popular", movies: popularState.movies!)
                         
                     } else {
                         LoadingView(isLoading: self.popularState.isLoading, error: self.popularState.error) {
