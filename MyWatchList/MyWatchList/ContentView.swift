@@ -28,20 +28,20 @@ struct ContentView: View {
             }
             .tag(1)
             
-            MovieSeenView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "checkmark")
-                        Text("Seen")
-                    }
-            }
-            .tag(2)
-            
             MovieMustSeeView()
                 .tabItem {
                     VStack {
                         Image(systemName: "plus")
                         Text("Must see")
+                    }
+            }
+            .tag(2)
+            
+            MovieSeenView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "checkmark")
+                        Text("Seen")
                     }
             }
             .tag(3)
