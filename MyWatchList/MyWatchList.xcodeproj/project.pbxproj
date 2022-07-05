@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B755F0E247936D300FD58C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755F0D247936D300FD58C8 /* AppDelegate.swift */; };
-		8B755F10247936D300FD58C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755F0F247936D300FD58C8 /* SceneDelegate.swift */; };
+		8B755F0E247936D300FD58C8 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755F0D247936D300FD58C8 /* AppView.swift */; };
 		8B755F12247936D300FD58C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B755F11247936D300FD58C8 /* ContentView.swift */; };
 		8B755F14247936D400FD58C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B755F13247936D400FD58C8 /* Assets.xcassets */; };
 		8B755F17247936D400FD58C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B755F16247936D400FD58C8 /* Preview Assets.xcassets */; };
@@ -38,8 +37,7 @@
 
 /* Begin PBXFileReference section */
 		8B755F0A247936D300FD58C8 /* MyWatchList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWatchList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B755F0D247936D300FD58C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B755F0F247936D300FD58C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8B755F0D247936D300FD58C8 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8B755F11247936D300FD58C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B755F13247936D400FD58C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B755F16247936D400FD58C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -97,8 +95,7 @@
 		8B755F0C247936D300FD58C8 /* MyWatchList */ = {
 			isa = PBXGroup;
 			children = (
-				8B755F0D247936D300FD58C8 /* AppDelegate.swift */,
-				8B755F0F247936D300FD58C8 /* SceneDelegate.swift */,
+				8B755F0D247936D300FD58C8 /* AppView.swift */,
 				8B755F292479390E00FD58C8 /* Utils.swift */,
 				8B755F372479460500FD58C8 /* Bindings */,
 				8B755F34247945E300FD58C8 /* Views */,
@@ -252,9 +249,8 @@
 				8B755F4124796A7A00FD58C8 /* MovieListView.swift in Sources */,
 				8B755F4324796A8700FD58C8 /* MovieListState.swift in Sources */,
 				ECE34D6628734A8600D8B701 /* MovieBackdropVerticalCarouselView.swift in Sources */,
-				8B755F0E247936D300FD58C8 /* AppDelegate.swift in Sources */,
+				8B755F0E247936D300FD58C8 /* AppView.swift in Sources */,
 				8B755F4824796B8200FD58C8 /* LoadingView.swift in Sources */,
-				8B755F10247936D300FD58C8 /* SceneDelegate.swift in Sources */,
 				8B755F3D2479524600FD58C8 /* MoviePosterCard.swift in Sources */,
 				ECE34D732873669A00D8B701 /* MovieButtonsView.swift in Sources */,
 				8B755F392479460E00FD58C8 /* ImageLoader.swift in Sources */,
