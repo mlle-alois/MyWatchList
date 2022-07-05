@@ -41,6 +41,8 @@
 		8B755F11247936D300FD58C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B755F13247936D400FD58C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B755F16247936D400FD58C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B755F19247936D400FD58C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B755F1B247936D400FD58C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B755F222479370E00FD58C8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8B755F252479377300FD58C8 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		8B755F27247938A900FD58C8 /* MovieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
@@ -104,6 +106,8 @@
 				8B755F212479370700FD58C8 /* Models */,
 				8B755F11247936D300FD58C8 /* ContentView.swift */,
 				8B755F13247936D400FD58C8 /* Assets.xcassets */,
+				8B755F18247936D400FD58C8 /* LaunchScreen.storyboard */,
+				8B755F1B247936D400FD58C8 /* Info.plist */,
 				8B755F15247936D400FD58C8 /* Preview Content */,
 			);
 			path = MyWatchList;
