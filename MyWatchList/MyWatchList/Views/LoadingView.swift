@@ -18,7 +18,7 @@ struct LoadingView: View {
             if isLoading {
                 HStack {
                     Spacer()
-                    ActivityIndicatorView()
+                    ProgressView()
                     Spacer()
                 }
             } else if error != nil {
