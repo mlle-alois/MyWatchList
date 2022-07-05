@@ -35,5 +35,9 @@ class MovieListState: ObservableObject {
         }
     }
     
+    func loadMoviesFromAppStorage() {
+        //TODO
+    }
+    
 }
 
