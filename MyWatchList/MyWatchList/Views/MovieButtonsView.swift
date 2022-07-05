@@ -11,23 +11,36 @@ struct MovieButtonsView: View {
     
     let movie: Movie
     
+    @State private var buttonAddBackColor:Color = .white //TODO set right color if in list
+    @State private var buttonSeenBackColor:Color = .white //TODO set right color if in list
+    
     var body: some View {
         VStack {
             HStack {
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .foregroundColor(.white)
-                }
                 
                 Button {
-                    
+                    if (self.buttonAddBackColor == .green) {
+                        self.buttonAddBackColor = .white
+                    } else {
+                        self.buttonAddBackColor = .green
+                    }
+                } label: {
+                    Image(systemName: "plus.circle.fill")
+                    .foregroundColor(buttonAddBackColor)
+                }.shadow(color: .black, radius: 10)
+                
+                Button {
+                    if (self.buttonSeenBackColor == .green) {
+                        self.buttonSeenBackColor = .white
+                    } else {
+                        self.buttonSeenBackColor = .green
+                    }
                 } label: {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.white)
-                }
+                    .foregroundColor(buttonSeenBackColor)
+                }.shadow(color: .black, radius: 10)
+                
             }
             Spacer()
         }.padding(.all, 5)

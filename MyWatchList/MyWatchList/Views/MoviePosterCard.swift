@@ -27,7 +27,12 @@ struct MoviePosterCard: View {
                     .fill(Color.gray.opacity(0.3))
                     .cornerRadius(8)
                     .shadow(radius: 4)
-                MovieButtonsView(movie: movie)
+                VStack {
+                    HStack {
+                        Spacer()
+                        MovieButtonsView(movie: movie)}
+                    Spacer()
+                }.padding(.all, 5)
                 
                 Text(movie.title)
                     .multilineTextAlignment(.center)
