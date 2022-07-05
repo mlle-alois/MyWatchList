@@ -31,7 +31,6 @@ struct MovieSearchView: View {
                 }
                 
             }
-            .navigationViewStyle(.stack)
             .searchable(text: self.$movieSearchState.query, prompt: "Search movies")
             .listRowInsets(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
             .onAppear {

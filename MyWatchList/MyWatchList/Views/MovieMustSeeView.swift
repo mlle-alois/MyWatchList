@@ -31,7 +31,6 @@ struct MovieMustSeeView: View {
                 
             }
         }
-        .navigationViewStyle(.stack)
         .onAppear {
             self.moviesSeen.loadMovies(with: .popular)
         }
