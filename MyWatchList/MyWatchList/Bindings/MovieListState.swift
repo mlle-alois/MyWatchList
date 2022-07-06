@@ -35,8 +35,22 @@ class MovieListState: ObservableObject {
         }
     }
     
-    func loadMoviesFromAppStorage() {
-        //TODO
+    func loadSeenMoviesFromAppStorage() {
+        self.movies = nil
+        self.isLoading = true
+        self.movieService.getAllSeenMovies().forEach({ id in
+            self.movieService.getMovie(id: id) {[weak self] (result) in
+                guard let self = self else { return }
+                
+                self.isLoading = false
+                switch result {
+                case .success(let movie):
+                    self.movies?.append(movie)
+                case .failure(let error):
+                    self.error = error as NSError
+                }
+            }
+        })
     }
     
 }

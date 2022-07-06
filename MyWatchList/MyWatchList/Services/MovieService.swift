@@ -10,6 +10,10 @@ protocol MovieService {
     func getMovies(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ())
     func getMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ())
     func searchMovie(query: String, completion: @escaping (Result<MovieResponse, MovieError>) -> ())
+    func getAllSeenMovies() -> [Int]
+    func getAllMustSeeMovies() -> [Int]
+    func addSeenMovie(seenMovieId: Int)
+    func addMustSeeMovie(mustSeeMovieId: Int)
 }
 
 enum MovieListEndpoint: String, CaseIterable, Identifiable {
