@@ -19,7 +19,7 @@ struct MovieBackdropHorizontalCarouselView: View {
                 .fontWeight(.bold)
                 .padding(.horizontal)
             
-            ScrollView(.horizontal, showsIndicators: true) {
+            ScrollView(.horizontal) {
                 HStack(alignment: .top, spacing: 16) {
                     ForEach(self.movies) { movie in
                         NavigationLink(destination: MovieDetailView(movieId: movie.id)) {

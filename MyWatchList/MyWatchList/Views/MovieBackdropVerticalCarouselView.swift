@@ -19,7 +19,7 @@ struct MovieBackdropVerticalCarouselView: View {
                 .fontWeight(.bold)
                 .padding()
             
-            ScrollView(.vertical, showsIndicators: true) {
+            ScrollView(.horizontal) {
                 VStack(alignment: .center, spacing: 16) {
                     ForEach(self.movies) { movie in
                         NavigationLink(destination: MovieDetailView(movieId: movie.id)) {
