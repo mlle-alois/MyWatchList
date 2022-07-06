@@ -13,7 +13,7 @@ struct MovieBackdropCard: View {
     @ObservedObject var imageLoader = ImageLoader()
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             ZStack {
                 Rectangle()
                     .fill(Color.gray.opacity(0.3))

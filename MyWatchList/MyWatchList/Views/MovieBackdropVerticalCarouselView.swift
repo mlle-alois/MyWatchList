@@ -13,14 +13,14 @@ struct MovieBackdropVerticalCarouselView: View {
     let movies: [Movie]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        VStack(alignment: .center, spacing: 0) {
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
             
             ScrollView(.horizontal) {
-                VStack(alignment: .center, spacing: 16) {
+                VStack {
                     ForEach(self.movies) { movie in
                         NavigationLink(destination: MovieDetailView(movieId: movie.id)) {
                             MovieBackdropCard(movie: movie)
