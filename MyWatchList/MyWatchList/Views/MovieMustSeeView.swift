@@ -15,8 +15,8 @@ struct MovieMustSeeView: View {
         NavigationView {
             List {
                 Group {
-                    if moviesSeen.movies != nil {
-                        MovieBackdropVerticalCarouselView(title: "Must see", movies: moviesSeen.movies!)
+                    if let movies = moviesSeen.movies {
+                        MovieBackdropVerticalCarouselView(title: "Must see", movies: movies)
                         
                     } else {
                         LoadingView(isLoading: self.moviesSeen.isLoading, error: self.moviesSeen.error) {

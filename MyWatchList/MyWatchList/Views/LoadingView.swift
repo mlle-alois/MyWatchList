@@ -21,13 +21,13 @@ struct LoadingView: View {
                     ProgressView()
                     Spacer()
                 }
-            } else if error != nil {
+            } else if let error = error {
                 HStack {
                     Spacer()
                     VStack(spacing: 4) {
-                        Text(error!.localizedDescription).font(.headline)
-                        if self.retryAction != nil {
-                            Button(action: self.retryAction!) {
+                        Text(error.localizedDescription).font(.headline)
+                        if let retry = self.retryAction {
+                            Button(action: retry) {
                                 Text("Retry")
                             }
                             .foregroundColor(Color.blue)

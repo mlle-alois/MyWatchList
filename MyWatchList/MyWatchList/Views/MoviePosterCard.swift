@@ -14,8 +14,8 @@ struct MoviePosterCard: View {
     
     var body: some View {
         ZStack {
-            if self.imageLoader.image != nil {
-                Image(uiImage: self.imageLoader.image!)
+            if let image = self.imageLoader.image {
+                Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .cornerRadius(8)

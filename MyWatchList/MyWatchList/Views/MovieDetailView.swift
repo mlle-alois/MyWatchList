@@ -18,8 +18,8 @@ struct MovieDetailView: View {
                 self.movieDetailState.loadMovie(id: self.movieId)
             }
             
-            if movieDetailState.movie != nil {
-                MovieDetailListView(movie: self.movieDetailState.movie!)
+            if let movie = movieDetailState.movie {
+                MovieDetailListView(movie: movie)
                 
             }
         }

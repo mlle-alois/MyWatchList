@@ -19,11 +19,6 @@ struct MovieButtonsView: View {
     init(movie: Movie, movieService: MovieService = MovieServiceAPI.shared) {
         self.movieService = movieService
         self.movie = movie
-        if (self.movieService.getAllSeenMovies().contains(movie.id)) {
-            self.buttonSeenBackColor = .green
-        } else {
-            self.buttonSeenBackColor = .white
-        }
     }
     
     var body: some View {
@@ -67,7 +62,21 @@ struct MovieButtonsView: View {
                 
             }
             Spacer()
-        }.padding(.all, 5)
+        }
+        .padding(.all, 5)
+        .onAppear {
+            if (self.movieService.getAllSeenMovies().contains(movie.id)) {
+                self.buttonSeenBackColor = .green
+            } else {
+                self.buttonSeenBackColor = .white
+            }
+            
+            if (self.movieService.getAllMustSeeMovies().contains(movie.id)) {
+                self.buttonAddBackColor = .white
+            } else {
+                self.buttonAddBackColor = .green
+            }
+        }
     }
 }
 

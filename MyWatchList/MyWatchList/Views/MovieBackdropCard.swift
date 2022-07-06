@@ -18,8 +18,8 @@ struct MovieBackdropCard: View {
                 Rectangle()
                     .fill(Color.gray.opacity(0.3))
                 
-                if self.imageLoader.image != nil {
-                    Image(uiImage: self.imageLoader.image!)
+                if let image = self.imageLoader.image {
+                    Image(uiImage: image)
                     .resizable()
                 }
                 MovieButtonsView(movie: movie)

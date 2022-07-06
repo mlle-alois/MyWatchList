@@ -19,8 +19,8 @@ struct MovieSearchView: View {
                     self.movieSearchState.search(query: self.movieSearchState.query)
                 }
                 
-                if self.movieSearchState.movies != nil {
-                    ForEach(self.movieSearchState.movies!) { movie in
+                if let movies = self.movieSearchState.movies {
+                    ForEach(movies) { movie in
                         NavigationLink(destination: MovieDetailView(movieId: movie.id)) {
                             VStack(alignment: .leading) {
                                 Text(movie.title)

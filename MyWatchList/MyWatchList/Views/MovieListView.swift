@@ -18,8 +18,8 @@ struct MovieListView: View {
         NavigationView {
             List {
                 Group {
-                    if nowPlayingState.movies != nil {
-                        MoviePosterCarouselView(title: "Now Playing", movies: nowPlayingState.movies!)
+                    if let movies = nowPlayingState.movies {
+                        MoviePosterCarouselView(title: "Now Playing", movies: movies)
                         
                     } else {
                         LoadingView(isLoading: self.nowPlayingState.isLoading, error: self.nowPlayingState.error) {
@@ -31,8 +31,8 @@ struct MovieListView: View {
                 .listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
                 
                 Group {
-                    if upcomingState.movies != nil {
-                        MovieBackdropHorizontalCarouselView(title: "Upcoming", movies: upcomingState.movies!)
+                    if let movies = upcomingState.movies {
+                        MovieBackdropHorizontalCarouselView(title: "Upcoming", movies: movies)
                     } else {
                         LoadingView(isLoading: self.upcomingState.isLoading, error: self.upcomingState.error) {
                             self.upcomingState.loadMovies(with: .upcoming)
@@ -43,8 +43,8 @@ struct MovieListView: View {
                 
                 
                 Group {
-                    if topRatedState.movies != nil {
-                        MovieBackdropHorizontalCarouselView(title: "Top Rated", movies: topRatedState.movies!)
+                    if let movies = topRatedState.movies {
+                        MovieBackdropHorizontalCarouselView(title: "Top Rated", movies: movies)
                         
                     } else {
                         LoadingView(isLoading: self.topRatedState.isLoading, error: self.topRatedState.error) {
@@ -57,8 +57,8 @@ struct MovieListView: View {
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
                 
                 Group {
-                    if popularState.movies != nil {
-                        MovieBackdropHorizontalCarouselView(title: "Popular", movies: popularState.movies!)
+                    if let movies = popularState.movies {
+                        MovieBackdropHorizontalCarouselView(title: "Popular", movies: movies)
                         
                     } else {
                         LoadingView(isLoading: self.popularState.isLoading, error: self.popularState.error) {
