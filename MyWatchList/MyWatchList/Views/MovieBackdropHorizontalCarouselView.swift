@@ -13,7 +13,7 @@ struct MovieBackdropHorizontalCarouselView: View {
     let movies: [Movie]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        VStack(alignment: .leading) {
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
