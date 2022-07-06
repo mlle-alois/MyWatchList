@@ -14,6 +14,8 @@ protocol MovieService {
     func getAllMustSeeMovies() -> [Int]
     func addSeenMovie(seenMovieId: Int)
     func addMustSeeMovie(mustSeeMovieId: Int)
+    func deleteSeenMovie(seenMovieId: Int)
+    func deleteMustSeeMovie(mustSeeMovieId: Int)
 }
 
 enum MovieListEndpoint: String, CaseIterable, Identifiable {

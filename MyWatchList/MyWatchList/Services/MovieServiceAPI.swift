@@ -67,6 +67,14 @@ class MovieServiceAPI: MovieService {
         movieRepository.addMustSeeMovie(mustSeeMovieId: mustSeeMovieId)
     }
     
+    func deleteSeenMovie(seenMovieId: Int) {
+        movieRepository.deleteSeenMovie(seenMovieId: seenMovieId)
+    }
+    
+    func deleteMustSeeMovie(mustSeeMovieId: Int) {
+        movieRepository.deleteMustSeeMovie(mustSeeMovieId: mustSeeMovieId)
+    }
+    
     private func loadURLAndDecode<D: Decodable>(url: URL, params: [String: String]? = nil, completion: @escaping (Result<D, MovieError>) -> ()) {
         guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             completion(.failure(.invalidEndpoint))

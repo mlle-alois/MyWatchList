@@ -30,19 +30,23 @@ class MovieRepositoryInMemory {
         mustSeeMovieIds.append(mustSeeMovieId);
     }
     
-    /*func deleteSeenMovie(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
-        guard let url = URL(string: "\(baseAPIURL)/movie/\(endpoint.rawValue)") else {
-            completion(.failure(.invalidEndpoint))
-            return
+    func deleteSeenMovie(seenMovieId: Int) {
+        let index = seenMovieIds.firstIndex(of: seenMovieId)
+        if let foundIndex = index {
+            seenMovieIds.remove(at: foundIndex);
+        } else {
+            print("Not found")
         }
     }
     
-    func deleteMustSeeMovie(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
-        guard let url = URL(string: "\(baseAPIURL)/movie/\(endpoint.rawValue)") else {
-            completion(.failure(.invalidEndpoint))
-            return
+    func deleteMustSeeMovie(mustSeeMovieId: Int) {
+        let index = mustSeeMovieIds.firstIndex(of: mustSeeMovieId)
+        if let foundIndex = index {
+            mustSeeMovieIds.remove(at: foundIndex);
+        } else {
+            print("Not found")
         }
-    }*/
+    }
 }
 
 extension Array: RawRepresentable where Element: Codable {

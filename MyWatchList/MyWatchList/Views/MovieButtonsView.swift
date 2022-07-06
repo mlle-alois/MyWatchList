@@ -11,8 +11,20 @@ struct MovieButtonsView: View {
     
     let movie: Movie
     
-    @State private var buttonAddBackColor:Color = .white //TODO set right color if in list
-    @State private var buttonSeenBackColor:Color = .white //TODO set right color if in list
+    private let movieService: MovieService
+    
+    @State private var buttonAddBackColor:Color = .white
+    @State private var buttonSeenBackColor:Color = .white
+    
+    init(movie: Movie, movieService: MovieService = MovieServiceAPI.shared) {
+        self.movieService = movieService
+        self.movie = movie
+        if (self.movieService.getAllSeenMovies().contains(movie.id)) {
+            self.buttonSeenBackColor = .green
+        } else {
+            self.buttonSeenBackColor = .white
+        }
+    }
     
     var body: some View {
         VStack {
@@ -20,10 +32,14 @@ struct MovieButtonsView: View {
                 Spacer()
                 
                 Button {
-                    if (self.buttonAddBackColor == .green) {
+                    if (self.movieService.getAllMustSeeMovies().contains(movie.id)) {
                         self.buttonAddBackColor = .white
+                        self.movieService.deleteMustSeeMovie(mustSeeMovieId: movie.id)
+                        print(self.movieService.getAllMustSeeMovies())
                     } else {
                         self.buttonAddBackColor = .green
+                        self.movieService.addMustSeeMovie(mustSeeMovieId: movie.id)
+                        print(self.movieService.getAllMustSeeMovies())
                     }
                 } label: {
                     Image(systemName: "plus.circle.fill")
@@ -33,10 +49,14 @@ struct MovieButtonsView: View {
                 .buttonStyle(BorderlessButtonStyle())
                 
                 Button {
-                    if (self.buttonSeenBackColor == .green) {
+                    if (self.movieService.getAllSeenMovies().contains(movie.id)) {
                         self.buttonSeenBackColor = .white
+                        self.movieService.deleteSeenMovie(seenMovieId: movie.id)
+                        print(self.movieService.getAllSeenMovies())
                     } else {
                         self.buttonSeenBackColor = .green
+                        self.movieService.addSeenMovie(seenMovieId: movie.id)
+                        print(self.movieService.getAllSeenMovies())
                     }
                 } label: {
                     Image(systemName: "checkmark.circle.fill")

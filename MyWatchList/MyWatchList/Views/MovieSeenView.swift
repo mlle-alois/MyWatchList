@@ -20,7 +20,7 @@ struct MovieSeenView: View {
                         
                     } else {
                         LoadingView(isLoading: self.moviesSeen.isLoading, error: self.moviesSeen.error) {
-                            self.moviesSeen.loadMovies(with: .popular)
+                            self.moviesSeen.loadSeenMoviesFromAppStorage()
                         }
                     }
                 }
@@ -28,7 +28,7 @@ struct MovieSeenView: View {
             }
         }
         .onAppear {
-            self.moviesSeen.loadMovies(with: .popular)
+            self.moviesSeen.loadSeenMoviesFromAppStorage()
         }
         
     }
