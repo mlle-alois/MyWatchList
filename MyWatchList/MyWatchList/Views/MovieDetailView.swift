@@ -60,10 +60,10 @@ struct MovieDetailListView: View {
             Divider()
             
             HStack(alignment: .top, spacing: 4) {
-                if movie.cast != nil && movie.cast!.count > 0 {
+                if let cast = movie.cast, cast.count > 0 {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Starring").font(.headline)
-                        ForEach(self.movie.cast!.prefix(9)) { cast in
+                        ForEach(cast.prefix(9)) { cast in
                             Text(cast.name)
                         }
                     }
@@ -72,27 +72,27 @@ struct MovieDetailListView: View {
                     
                 }
                 
-                if movie.crew != nil && movie.crew!.count > 0 {
+                if let crew = movie.crew, crew.count > 0 {
                     VStack(alignment: .leading, spacing: 4) {
-                        if movie.directors != nil && movie.directors!.count > 0 {
+                        if let directors = movie.directors, directors.count > 0 {
                             Text("Director(s)").font(.headline)
-                            ForEach(self.movie.directors!.prefix(2)) { crew in
+                            ForEach(directors.prefix(2)) { crew in
                                 Text(crew.name)
                             }
                         }
                         
-                        if movie.producers != nil && movie.producers!.count > 0 {
+                        if let producers = movie.producers, producers.count > 0 {
                             Text("Producer(s)").font(.headline)
                                 .padding(.top)
-                            ForEach(self.movie.producers!.prefix(2)) { crew in
+                            ForEach(producers.prefix(2)) { crew in
                                 Text(crew.name)
                             }
                         }
                         
-                        if movie.screenWriters != nil && movie.screenWriters!.count > 0 {
+                        if let screenWriters = movie.screenWriters, screenWriters.count > 0 {
                             Text("Screenwriter(s)").font(.headline)
                                 .padding(.top)
-                            ForEach(self.movie.screenWriters!.prefix(2)) { crew in
+                            ForEach(screenWriters.prefix(2)) { crew in
                                 Text(crew.name)
                             }
                         }
@@ -112,8 +112,8 @@ struct MovieDetailImage: View {
     var body: some View {
         ZStack {
             Rectangle().fill(Color.gray.opacity(0.3))
-            if self.imageLoader.image != nil {
-                Image(uiImage: self.imageLoader.image!)
+            if let image = self.imageLoader.image {
+                Image(uiImage: image)
                     .resizable()
             }
         }
