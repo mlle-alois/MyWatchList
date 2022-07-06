@@ -15,14 +15,14 @@ class MovieListState: ObservableObject {
 
     private let movieService: MovieService
     
-    init(movieService: MovieService = MovieStore.shared) {
+    init(movieService: MovieService = MovieServiceAPI.shared) {
         self.movieService = movieService
     }
     
     func loadMovies(with endpoint: MovieListEndpoint) {
         self.movies = nil
         self.isLoading = true
-        self.movieService.fetchMovies(from: endpoint) { [weak self] (result) in
+        self.movieService.getMovies(from: endpoint) { [weak self] (result) in
             guard let self = self else { return }
             self.isLoading = false
             switch result {

@@ -14,7 +14,6 @@ struct MovieSeenView: View {
     var body: some View {
         NavigationView {
             List {
-                
                 Group {
                     if moviesSeen.movies != nil {
                         MovieBackdropVerticalCarouselView(title: "Seen", movies: moviesSeen.movies!)
@@ -26,9 +25,6 @@ struct MovieSeenView: View {
                     }
                 }
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 16, trailing: 0))
-                
-                
-                
             }
         }
         .onAppear {

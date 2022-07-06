@@ -1,23 +1,18 @@
 //
-//  MovieStore.swift
+//  MovieServiceAppStorage.swift
 //  MyWatchList
 //
-//  Created by Etudiant on 29/06/2022.
+//  Created by etudiant on 06/07/2022.
 //
 
 import Foundation
 
-class MovieStore: MovieService {
+class MovieServiceAppStorage {
     
-    static let shared = MovieStore()
+    static let shared = MovieServiceAppStorage()
     private init() {}
     
-    private let apiKey = "560a4c4f919b06a53b7868a1c866428c"
-    private let baseAPIURL = "https://api.themoviedb.org/3"
-    private let urlSession = URLSession.shared
-    private let jsonDecoder = Utils.jsonDecoder
-    
-    func fetchMovies(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
+    func getMovies(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
         guard let url = URL(string: "\(baseAPIURL)/movie/\(endpoint.rawValue)") else {
             completion(.failure(.invalidEndpoint))
             return
@@ -25,7 +20,7 @@ class MovieStore: MovieService {
         self.loadURLAndDecode(url: url, completion: completion)
     }
     
-    func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
+    func getMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
         guard let url = URL(string: "\(baseAPIURL)/movie/\(id)") else {
             completion(.failure(.invalidEndpoint))
             return

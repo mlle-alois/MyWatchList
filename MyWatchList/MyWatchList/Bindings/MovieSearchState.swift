@@ -24,7 +24,7 @@ class MovieSearchState: ObservableObject {
         !self.query.isEmpty && self.movies != nil && self.movies!.isEmpty
     }
     
-    init(movieService: MovieService = MovieStore.shared) {
+    init(movieService: MovieService = MovieServiceAPI.shared) {
         self.movieService = movieService
     }
     
