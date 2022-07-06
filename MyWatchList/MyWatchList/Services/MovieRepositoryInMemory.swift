@@ -34,8 +34,6 @@ class MovieRepositoryInMemory {
         let index = seenMovieIds.firstIndex(of: seenMovieId)
         if let foundIndex = index {
             seenMovieIds.remove(at: foundIndex);
-        } else {
-            print("Not found")
         }
     }
     
@@ -43,8 +41,6 @@ class MovieRepositoryInMemory {
         let index = mustSeeMovieIds.firstIndex(of: mustSeeMovieId)
         if let foundIndex = index {
             mustSeeMovieIds.remove(at: foundIndex);
-        } else {
-            print("Not found")
         }
     }
 }
